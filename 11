@@ -1,0 +1,28 @@
+Live streaming and some neat C stuff
+
+
+Today I live streamed on Twitch for the first time. It was fun! Someone tuned
+into the stream and said "What are you doing?" when I was browsing Twitter.
+Great anti-procrastination! Here are two things I learned about today:
+
+1. Named/Designated initializers in C.
+
+    int a[6] = { [4] = 29, [2] = 15} // <==>
+    int a[6] = {0,0,15,0,29,0}.
+
+Pretty cool! It took me a while to get, because in C99 you don't even need the
+=, so you get code in xv6 that looks like this:
+  
+   static int (*syscalls[])(void) = { [SYS_fork] sys_fork, ... }
+
+Which took me a while to get what I was even looking at, but it's a very neat
+way to get a dictionary data structure in C with very little code.
+
+2. If you use strict gcc options, you get an error if you define but don't use a
+variable. You can get around this by casting the variable to void:
+
+    int var;
+    (void)var;
+
+* Print when a syscall is being made along with the return value
++ Add a system call for getting the date

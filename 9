@@ -1,0 +1,27 @@
+xv6 boot and the upside down stack
+
+
+When booting xv6, what's on the stack when we enter the kernel? After
+two days of wrestling with assembly references, re-reading the xv6
+appendix to figure out what is going on in the computer's memory at
+what point, and generally getting comfortable with GDB, I think I have
+a reasonable mental model to answer that question.
+
+One thing that was confusing for a long time was the fact that a stack in an x86
+PC grows down in memory, and the "top" of the stack is, well, at the bottom.
+
+I was also generally new to things like calling convention in C, and what
+instructions modified the stack in what way. The breakthrough came when I
+meticulously single-stepped through most of the bootblock.asm file and making
+sure I understand what each instruction was doing.
+
+What's on the stack?
+0x7bcc:         0x00007db7 (entry return address)
+0x7bd0..0x7be8: 0x00000000 (bootmain allocated for variables)
+0x7bec..0x7bf8: 0x00000000 (bootmain ebx/esi/edi/ebp register)
+0x7bfc:         0x00007c4d (bootmain return address)
+
+0x7c00: 0x8ec031fa (stack starts here, not part of)
+
+* boot xv6
+* figured out how to read assembly, use gdb and how the stack works

@@ -1,0 +1,24 @@
+Stack post draft and why the command line is often better
+
+First real draft of post on understanding the stack is done. Almost
+3000 words. I also made a short 5-10 minute video where I trace a
+system call from user space to kernel space and back using GDB. I
+think it's pretty cool! Will post it soon.
+
+I don't use this GDB feature that much, but it's pretty neat:
+
+    break syscall.c:160 if num == 8
+
+It breaks at a specific line when the variable num is set to 8. Along
+with watchpoint for seeing when a register has changed and the until
+<linenumber> I feel confident I can step through most things in GDB.
+
+Why the command line is still better for many tasks. Mission: add
+audio to video created at Twitch. Twitch has no way to add audio after
+creating a highlight. Export to Youtube. Neither does Youtube
+editor. *Download video from YT* After 20m with each, I have no idea
+how to do it with iMovie or Quicktime. Bloatware. 5m of google, c/p
+first ffmpeg oneliner => works.
+
+* first draft of stack post
+* made a video following a system call

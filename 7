@@ -1,0 +1,34 @@
+More on the xv6 shell
+
+
+Today I implemented redir, which allows you to write things like "ls > y". It's
+pretty neat how it works. Here's the relevant code:
+
+rcmd = (struct redircmd*)cmd;
+close(rcmd->fd);
+if (open(rcmd->file, rcmd->mode) < 0) {
+  fprintf(stderr, "open %s failed\n", rcmd->file);
+}
+runcmd(rcmd->cmd);
+
+We close the file with the relevant file descriptor, either 0 for STIDN or 1 for
+STDOUT. When we open the file we are redirected to it'll be assigned the lowest
+file descriptor, which is the one we just closed. Once that's done we simply run
+the desired command.
+
+To avoid having to write "/bin/ls" and instead just be able to write
+"ls" I wrote the following PATH logic. It's not great but it'll have
+to suffice for now. It took me a while to understand how to use
+strcat, primarily because my mental model of memory management was
+wrong.
+
+char fullpath[100] = "/bin/";
+strcat(fullpath, ecmd->argv[0]);
+if(ecmd->argv[0] == 0)
+  exit(0);
+// First try PWD, then /bin/
+execv(ecmd->argv[0], ecmd->argv);
+execv(fullpath, ecmd->argv);
+
+* xv6 shell check in /bin/
++ run xv6 with qemu

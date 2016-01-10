@@ -1,0 +1,24 @@
+Learning C and xv6
+
+
+Reviewed K&R today and did a speed-tour of the first half of the book, writing
+some small programs in C and taking notes of constructs I was using that I
+wasn't 100% sure on. For example: prefix vs postfix incrementor, pointers, array
+initialization and nil-termination.
+
+I've started deep diving into the xv6 source code and booklet, starting with the
+shell file as an entry point, looking up any constructs I don't understand with
+K&R, man pages, SO, etc. It's a lot of work but I'm slowly and surely getting an
+understanding of the code.
+
+Here's another grepism to find all occurrences of fgets in pwd and subdirs, in
+.c and .h files:
+
+> grep -r --include=*.{c,h} fgets .
+
+(The reason grep -r fgets *.c *.h doesn't work is because it expands the
+filenames before searching recursively.)
+
+* write small programs in C from K&R: wc, strlen, swap.
+* complete exec function in xv6 shell
++ get xv6 shell to redir and pipe

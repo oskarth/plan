@@ -1,0 +1,18 @@
+Pointers
+
+
+Realized I was glossing over some details when reading code so I decided to go
+back to looking at pointers using a little C file I found at MIT's OS class
+website. See pointer-notes.c in my K&R repo at Github.
+
+Here are the mistakes I made:
+
+// 1. c[0] = 200 does change value of a, because it is a[0].
+// 2. 3[c] = 302, x[i] is syntactic sugar for *(x+i), where x is a pointer.
+//    So this would just mean: *(3+c). Presumably that's the same as c+3.
+// 3. Changing c doesn't change a, need to check *c for that.
+// 4. Casting c+1 into char* then int* doesn't give same, since sizeof char is 1
+//    and size of int is 1. So we get an offset of 1 and thus gibberish.
+
+
+* pointer stuff

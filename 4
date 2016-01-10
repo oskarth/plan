@@ -1,0 +1,21 @@
+More on the lisp interpreter 
+
+
+I saw someone on Github who solved the issue with mutable pairs. Essentially
+it was the same as what I had done, with the addition of a function that
+converts all user input lists to mutable lists, along with a convenience macro
+that allows us to use mcadr, and other nested access functions. This strikes me
+as a hack that works, but not as the right solution.
+
+After talking to some helpful people on IRC, especially technomancy of Leiningen
+and Atreus fame, I got some pointers on how to approach the problem. I decided
+to keep the local environment immutable, and just create a hash-map for the
+mutable top-level, for defining functions and such.
+
+I also gave the lisp interpreter a real name: Sai. It's my little celebration of
+to the spirit in the machine. I'd like to keep working on it more - for example,
+I'd like to implement a macro system and play around with that. We'll see if
+or when time permits.
+
+* (define bar (lambda (x) (+ 1 x)) (definitions)
+* writing a simple append program works, (i.e. including conditionals)

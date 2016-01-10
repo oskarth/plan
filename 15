@@ -1,0 +1,21 @@
+Back from being offline and restructuring of these notes
+
+
+Today is July 31, 2015. I recently came back from more than a week of
+being completely offline. There's a write-up available at Experi.
+
+I decided to restructure these notes by removing all the ones without
+titles (i.e. the ones that had very little content in them). With this
+I renumbered all the previous entries, as you can see if you go to
+/list. The reason for doing this is because I didn't want to the
+entries to be boring. I skimmed over Carmack's original .plan files
+and I noticed he didn't actually post every single day, which is what
+I previously believed. If not even the insanely productive Carmack
+does daily entries, why should I?
+
+Last few days I've been adding a hacky alarm system call that calls a
+handler function ever nth hardware tick. Today I just started playing
+with some code for understanding how to use locks effectively.
+
+* Add alarm system call
+  pthreads and locks code

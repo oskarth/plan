@@ -1,0 +1,23 @@
+Learning GDB and some Clojurescript pairing
+
+
+Earlier in the day I paired on Instaparse-live in Clojurescript with @mhuebert.
+It was fun!
+
+Later at night I was getting deep into learning GDB, tracing system calls and
+messing around with symbol files, trying to trace it all the way into kernel
+space.
+
+Here are the final instruction before moving into kernel space when tracing the
+system call fstat:
+
+mov 0x8 %eax
+int    $0x40
+
+
+It's moving 8 into the eax register, which is the system call number for fstat.
+INT is an interrupt instruction for x86, and 0x40, in base 10, is 64, which
+means it's a system call interrupt.
+
+* Pair session in Clojurescript
++ Tracing a system call all the way through in GDB

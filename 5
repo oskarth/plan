@@ -1,0 +1,22 @@
+Getting started with xv6, a simple Unix-like teaching operating system
+
+
+Not a lot of coding done today; spent a bunch of time debugging compiler
+toolchain things for xv6. Got it to compile by setting up a small VPS with Linux
+on it instead of messing around with custom builds of gcc.
+
+Reviewed some shell basics. Apparently there are 382 words in the standard
+dictionary that have no a, e, i, o, or u. That's pretty cool.
+
+> grep -Ev 'a|A|e|E|i|I|o|O|u|U' /usr/share/dict/words | wc -l
+
+I started doing the shell homework and realized I needed to brush up on (or,
+rather, learn) C. Looked into the course that xv6 is based on and its
+prerequisites and here's what I found:
+
+The xv6 booklet is based on the Operating System Engineering course at MIT, 6.828.
+This course has, among other things, a pre-requisite of the material in course
+6.033 which in turn has a strong pre-requisite 6.004 (which I know probably less
+than 50% of). Yelp! Better get to work.
+
+* get xv6 to compile

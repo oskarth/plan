@@ -1,0 +1,22 @@
+Progress with the lisp interpreter
+
+
+Today I made time to work on the lisp interpreter, and I made some nice
+progress. I finally realized why I was stuck: earlier I had started with the
+eval and apply functions, and then tried to add the environment and all the
+other "details", such as primitive procedures and their bindings, ad hoc. This
+meant that I often didn't have working code, and my mental model suffered as a
+result.
+
+Today I started from the bottom-up, which is generally a much better way to do
+Lisp programming, so my confidence in the code and its workings grew. When I
+found bugs, I knew almost straight away where the problem was.
+
+I can now evaluate basic lambdas with proper scoping. The biggest problem was to
+reconcile the lack of mutable cons cells in Racket with the design SICP has for
+its environment model. I wasted a lot of time using mutable-cons, which infected
+the rest of my program. Eventually I decided to remove definitions and
+assignments, until I figured out how to deal with this mismatch. I also haven't
+implemented conditionals yet.
+
+* (((lambda (x) (lambda (y) (+ x y))) 3) 4)

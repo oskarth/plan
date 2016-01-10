@@ -1,0 +1,29 @@
+xv6 shell done, now time to boot
+
+
+Yesterday I finished implementing the pipe stuff for the shell. The key insight
+that I missed was that if you spawn two child proccesses, you have to close what
+seems like "the same" file descriptor both in the children and in the parent.
+Here's an excerpt from the relevant code:
+
+// we create a pipe with a read and write end:
+if(pipe(p) < 0) fprintf(stderr, "pipe error\n");
+// we fork a child process for the left side (similar code for right)
+if(fork() == 0) {
+close(1);    // close STDOUT
+dup(p[1]);   // create copy of fd p[1], using min. free fd, STDOUT
+close(p[0]); // we close this one so we can use it in the other child
+close(p[1]); // same
+runcmd(pcmd->left); // STDOUT is bound to pipe write-end
+}
+close(p[0]); // close read-end in parent 
+close(p[1]); // close write-end in parent
+wait(); // wait for left
+wait(); // wait for right
+
+Started trying to boot xv6, but there's a lot of tooling (QEMU, GDB)
+that needs to work.
+
+* look in /usr/bin too
++ get xv6 to boot
+* (non-code) write first post on grokking xv6

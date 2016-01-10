@@ -1,0 +1,22 @@
+(print "Hello world!")
+
+
+Today is June 9th, 2015, and I'm restarting my code journal. I'm working on my
+own little Lisp interpreter, based on the one described in SICP. My goal is to
+get it to a reasonable state by the end of this week, and then we'll see.
+Clojuresque data-strucures like vectors, maps and sets would be neat. Right now
+I'm more concerned about getting my interpreter environment recognized, though.
+
+On a separate note, I found myself asking questions such as: given that I send
+N emails and I think M% will respond, how big of a sample size do I need to be
+sure?  Alternatively, if I already have a sample size, what's my response rate?
+If you send 5 emails and you think 50% will respond, then everything between 0
+and 5 people responding would be within a 95% confidence interval. So I wrote a
+little unix util called rrange that computes this. Flipping 40 coins we get:
+
+    > rrange 0.5 40
+    Around 20 ~ [14, 26]
+
+* (eval '(lambda (x) x) '())
++ (eval '(((lambda (x) (lambda (y) (+ x y))) 3) 4) '())
+* made a little unix util in Racket called rrange

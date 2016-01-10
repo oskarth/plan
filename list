@@ -1,0 +1,22 @@
+Code notes
+
+June 2015
+
+ 1 (print "Hello world!")
+ 2 Coding interview problems and interpreter setbacks
+ 3 Progress with the lisp interpreter
+ 4 More on the lisp interpreter
+ 5 Getting started with xv6, a simple Unix-like teaching operating system
+ 6 Learning C and xv6
+ 7 More on the xv6 shell
+ 8 xv6 shell done, now time to boot
+ 9 xv6 boot and the upside down stack
+
+July 2015
+
+10 Pointers
+11 Live streaming and some neat C stuff
+12 Learning GDB and some Clojurescript pairing
+13 Stack post draft and why the command line is often better
+14 Misc things done
+15 Back from being offline and restructuring of these notes

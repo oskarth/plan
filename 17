@@ -1,0 +1,23 @@
+Re-scoped SQL practice and some meta-lessons
+
+
+Today is January 12th, 2016. Considering what I said last time about being
+paranoid about things taking more than a few days, I decided to limit the scope
+to just the two first sections of pgexercises.com. Here's my progress so far:
+
+Run 1: 8th to 11th January, 30-45m sessions. Total time: 2h 15m.
+Run 2: 12th January, 55m.
+Run 3: Hopefully tomorrow.
+
+I conducted the tests as a sort of "open book exam". I didn't read "Learn SQL"
+or anything like that beforehand, but instead looked things up as I got stuck.
+
+I'll clock in just under a week if I finish tomorrow, and if I hadn't limited
+the scope severely I might never have finished. Some meta-lesson are already
+clear:
+
+1. Ballpark estimate time for each exercise and take that number times two
+2. 30 minutes a day is very little for this type of experiment
+3. Being ruthless about cutting scope is good for finishing
+
+* Run 2 of SQL practice, ~1h.

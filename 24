@@ -1,0 +1,20 @@
+Practice+SRS experiment, version 2
+
+
+Hypothesis: Using spaced repetition will allow me to solve problems I've
+previously learned to solve twice as fast as if I don't use spaced repetition.
+
+Protocol: I've precomputed a series of 5 As and 5 Bs in a random order that I'm
+unaware of. I'm doing 10 exercises from Eloquent Javascript that I failed to
+produce the "optimal" solution in 5m. For each exercise I make a few flash cards
+and add them to my SRS. After doing that, I check the next draw in my random
+sequence, and if I get an A I keep the cards, and if I get a B I suspend it
+(i.e. I won't see it again).
+
+Doing this, I believe I've eliminated any bias I have in the effort I put into
+learning each thing, and to make the cards themselves. I believe the effect will be more
+pronounced with time, but I'm going to cap the delay from learning to testing to
+an average of two weeks. Each practice test will also be capped to 20 minutes.
+
+Meta-mistake: I started doing the above with some Go stuff which aren't relevant
+to me right now, motivation-wise.

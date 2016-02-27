@@ -1,0 +1,27 @@
+Preliminary conclusions from practice+SRS experiment
+
+
+About a week ago I worked on three small problems until I (a) felt like I
+understood them (b) solved them in ~5-10m from scratch. After that, I added a
+bunch flashcards to a spaced repetition program called Anki. I tried a mix of
+cards that are all possible to do in one's head. Examples of types of cards
+include:
+
+1. Checks for conceptual understanding
+2. Basic debugging: what's wrong with this piece of quote
+3. Complete a piece of tricky code
+4. Listing exhaustive cases to check for some simple domain
+5. Basic syntax and idioms questions
+
+I wrote a RPN calculator in Scheme, a basic aggregation query in SQL, and a word
+counter in C. Today I re-did them and was able to solve them all in ~5m. I've
+thus not been able to falsify my hypothesis.
+
+What does this mean? I don't know yet, and I'm still skeptical of the results.
+Perhaps I simply had these specific solutions fresh in my mind? Where does the
+line been memorization and internalization lie?
+
+A thought: Learning is a form of semantic compression of concepts that are
+robust under perturbation.
+
+To be continued.

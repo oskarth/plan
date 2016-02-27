@@ -1,0 +1,45 @@
+Examples of Anki cards
+
+
+1. Conceptual understanding
+[sql] Whats difference between WHERE and HAVING?
+---
+WHERE is used to filter what data gets input to aggregate function, HAVING is used to _filter_ output.
+
+2. Basic debugging
+[c] What's wrong in the following part of a word-count program?
+state = OUT;
+while ((c = getchar()) != EOF) {
+nc++;
+if (c == '\n')
+    nl++;
+if (c == ' ' || c == '\t' || c == '\n')
+    state = OUT;
+else {
+    state = IN;
+    nw++;
+}
+---
+Last clause should be `else if (state == OUT)`, otherwise we'll keep adding new words
+
+3. Complete code
+[scheme] Complete the following for an RPN calculator:
+(let rpn ((token (next)) (stk '()))
+  (cond ((eq? token 'nl) <stuff>)
+  ((number? token) <stuff)
+  (else ...))))
+---
+(rpn (next) (cons ((op token) (cadr stk) (car stk)) (cddr stk)))
+
+4. Cases
+[scheme] What are the main cases for a "next" fn for an RPN calculator?
+---
+1. EOF (exit)
+2. Space (skip to next thing)
+3. Newline (signal done)
+4. Else (for datums like numbers and operators)
+
+5. Idioms
+[c] How to read character-by-character from STDIN until EOF?
+---
+while ((c = getchar()) != EOF) { ... }

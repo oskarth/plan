@@ -1,0 +1,24 @@
+Attention calculus, part 2
+
+
+Let's look at the proportion between doing and writing. Assume you are writing
+about things you are doing (D). How much should you do before you write about
+it? As a lower bound, you don't want to write about every minutia. What about an
+upper bound?
+
+Consider Kahneman's magnus opus Thinking Fast and Slow. It represents the
+culmination of 30 years of work (30k hours), and it takes 20 hours to read (more
+with footnotes). That's a 1000x factor of D:R. But it's far from the only piece
+he (or Tversky) wrote, and it's more a matter of stepwise refinement of the same
+core ideas. You don't know in advance what of what you've written will turn out
+to have an impact.
+
+With a 10x factor for D:W we end up with a 100x factor from D:R, which is the
+same as for writers if we thinking of them as using another layering of
+writing/thinking for distillation.
+
+This leaves us with a D:W:R = 100:10:1. If you spend 1 hour writing about
+something you've done, you should've done about 10 hours of work. Obviously,
+it's a range, and maybe it' 3x or 30x.
+
+(continued in 28)

@@ -1,16 +1,25 @@
 Long time no see
 
 
-Hi there. Today is January 16th, 2017. New plan journal entry, first one in a
-very long time. Want to use it as a way to keep myself accountable now that I
-don't have a day job. The last few weeks I've been working on a spaced
-repetition tool for retaining programming knowledge. I gave myself three weeks
-and it's been a few days more than that now, so I really want to get it out
-there as soon as possible. Just need to make it reasonably usable and remove the
-worst bugs first.
+January 16th, 2017 in Canggu, Bali. New plan journal entry, first one in a very
+long time. Want to use it as a way to keep myself accountable. The last few
+weeks I've been working on a spaced repetition tool for retaining programming
+knowledge. I'm hoping to get a rough version out the door soon.
 
-What did I get done today? Let's have a look. As a reminder, "*" means done, " "
-not done, "-" I decided against it, and "+" was done at a later date.
+I'm trying to always share something useful in these notes, so here's a shell
+tip courtesy of vog on HN:
+
+#!/bin/sh
+tail -n +3 "@0" | ssh <foo@bar>; exit
+
+echo "hi"
+...
+
+The above self-contained script will ssh into some server and run all the
+commands in the body of the shell script. Clever.
+
+What did I get done today? "*" means done, " " not done, "-" I decided against
+it, and "+" was done at a later date.
 
 * show 'check your inbox' message when registering
 * pass through session token properly
@@ -18,4 +27,3 @@ not done, "-" I decided against it, and "+" was done at a later date.
 * accidentally check in mailgun api key (will burn once out of sandbox)
 * scheduled cards should check in user-email if user is logged in
   fix review-card command for user null pointer exception
-	make checklist of minimum things necessary to launch
